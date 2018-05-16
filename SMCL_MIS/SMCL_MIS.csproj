@@ -1,0 +1,1156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F3777EA0-A22C-42BB-A94F-D082225701CD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SMCL_MIS</RootNamespace>
+    <AssemblyName>SMCL_MIS</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>\\192.168.84.2\it\08_SourceCode\SMCL_MIS\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>\\192.168.84.2\it\08_SourceCode\SMCL_MIS\</UpdateUrl>
+    <TargetCulture>en-US</TargetCulture>
+    <ProductName>SMCL MIS</ProductName>
+    <PublisherName>Sean</PublisherName>
+    <MinimumRequiredVersion>1.0.0.19</MinimumRequiredVersion>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>80</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>true</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>SMCL_MIS.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>33_Z10_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>9140D09E7200FDF08FC5C6F2DA797DB9BE4377C8</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>SMCL_MIS_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Users\Sunluxe\Downloads\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.340.80\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.340.80\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroundControl\DeviceTimeInfo.cs" />
+    <Compile Include="GroundControl\GC_Browse.cs" />
+    <Compile Include="GroundControl\GC_Engineer.cs" />
+    <Compile Include="GroundControl\GC_HR.cs" />
+    <Compile Include="GroundControl\GC_Purchasing.cs" />
+    <Compile Include="GroundControl\GC_Sales.cs" />
+    <Compile Include="GroundControl\GC_Setting.cs" />
+    <Compile Include="GroundControl\GC_Wh.cs" />
+    <Compile Include="GroundControl\Igni.cs" />
+    <Compile Include="GroundControl\MachineInfo.cs" />
+    <Compile Include="GroundControl\UserIDInfo.cs" />
+    <Compile Include="GroundControl\UserInfo.cs" />
+    <Compile Include="GroundControl\ZTK\ClearFlag.cs" />
+    <Compile Include="GroundControl\ZTK\DeviceManipulator.cs" />
+    <Compile Include="GroundControl\ZTK\UniversalStatic.cs" />
+    <Compile Include="GroundControl\ZTK\ZkemClient.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorTom\1_Engineer\frmBOM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorTom\1_Engineer\frmBOM.Designer.cs">
+      <DependentUpon>frmBOM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorTom\1_Engineer\frmImportMaterials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorTom\1_Engineer\frmImportMaterials.Designer.cs">
+      <DependentUpon>frmImportMaterials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorTom\1_Engineer\frmMaterials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorTom\1_Engineer\frmMaterials.Designer.cs">
+      <DependentUpon>frmMaterials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorTom\4_Purchasing\frmPO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorTom\4_Purchasing\frmPO.Designer.cs">
+      <DependentUpon>frmPO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorTom\4_Purchasing\frmPOinfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorTom\4_Purchasing\frmPOinfo.Designer.cs">
+      <DependentUpon>frmPOinfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorTom\4_Purchasing\frmPomain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorTom\4_Purchasing\frmPomain.Designer.cs">
+      <DependentUpon>frmPomain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorTom\4_Purchasing\frmQuotation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorTom\4_Purchasing\frmQuotation.Designer.cs">
+      <DependentUpon>frmQuotation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorTom\4_Purchasing\frmSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorTom\4_Purchasing\frmSupplier.Designer.cs">
+      <DependentUpon>frmSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorTom\4_Purchasing\frmUpdate_po_mat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorTom\4_Purchasing\frmUpdate_po_mat.Designer.cs">
+      <DependentUpon>frmUpdate_po_mat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorTom\4_Purchasing\frm_Quoteinfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorTom\4_Purchasing\frm_Quoteinfo.Designer.cs">
+      <DependentUpon>frm_Quoteinfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorTom\4_Purchasing\RP\rp_po.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rp_po.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MajorTom\5_Warehouse\frmAdjust.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorTom\5_Warehouse\frmAdjust.Designer.cs">
+      <DependentUpon>frmAdjust.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorTom\5_Warehouse\frmInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorTom\5_Warehouse\frmInventory.Designer.cs">
+      <DependentUpon>frmInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorTom\5_Warehouse\frmIssue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorTom\5_Warehouse\frmIssue.Designer.cs">
+      <DependentUpon>frmIssue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorTom\5_Warehouse\frmReceiptPO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorTom\5_Warehouse\frmReceiptPO.Designer.cs">
+      <DependentUpon>frmReceiptPO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorTom\5_Warehouse\frmReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorTom\5_Warehouse\frmReturn.Designer.cs">
+      <DependentUpon>frmReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorTom\5_Warehouse\frmReturnPO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorTom\5_Warehouse\frmReturnPO.Designer.cs">
+      <DependentUpon>frmReturnPO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorTom\5_Warehouse\frmTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorTom\5_Warehouse\frmTransaction.Designer.cs">
+      <DependentUpon>frmTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorTom\5_Warehouse\frmTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorTom\5_Warehouse\frmTransfer.Designer.cs">
+      <DependentUpon>frmTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorTom\5_Warehouse\frmWH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorTom\5_Warehouse\frmWH.Designer.cs">
+      <DependentUpon>frmWH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorTom\6_Sales\frmCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorTom\6_Sales\frmCustomer.Designer.cs">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorTom\6_Sales\frmSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorTom\6_Sales\frmSales.Designer.cs">
+      <DependentUpon>frmSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorTom\6_Sales\frmSO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorTom\6_Sales\frmSO.Designer.cs">
+      <DependentUpon>frmSO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorTom\6_Sales\frmSosummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorTom\6_Sales\frmSosummary.Designer.cs">
+      <DependentUpon>frmSosummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorTom\6_Sales\RP\rp_so.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rp_so.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MajorTom\7_Settings\frmEquipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorTom\7_Settings\frmEquipment.Designer.cs">
+      <DependentUpon>frmEquipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorTom\7_Settings\frmEquipmentlist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorTom\7_Settings\frmEquipmentlist.Designer.cs">
+      <DependentUpon>frmEquipmentlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorTom\7_Settings\frmUserError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorTom\7_Settings\frmUserError.Designer.cs">
+      <DependentUpon>frmUserError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorTom\7_Settings\frmUserList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorTom\7_Settings\frmUserList.Designer.cs">
+      <DependentUpon>frmUserList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorTom\7_Settings\frmUsersettup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorTom\7_Settings\frmUsersettup.Designer.cs">
+      <DependentUpon>frmUsersettup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorTom\7_Settings\frm_Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorTom\7_Settings\frm_Settings.Designer.cs">
+      <DependentUpon>frm_Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorTom\8_Financial\frmTinhluongngoaigio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorTom\8_Financial\frmTinhluongngoaigio.Designer.cs">
+      <DependentUpon>frmTinhluongngoaigio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorTom\9_HR\frmCaidatcalamviec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorTom\9_HR\frmCaidatcalamviec.Designer.cs">
+      <DependentUpon>frmCaidatcalamviec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorTom\9_HR\frmCaidatmcc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorTom\9_HR\frmCaidatmcc.Designer.cs">
+      <DependentUpon>frmCaidatmcc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorTom\9_HR\frmCaidatphongban.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorTom\9_HR\frmCaidatphongban.Designer.cs">
+      <DependentUpon>frmCaidatphongban.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorTom\9_HR\frmCalendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorTom\9_HR\frmCalendar.Designer.cs">
+      <DependentUpon>frmCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorTom\9_HR\frmNhanvienlenmcc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorTom\9_HR\frmNhanvienlenmcc.Designer.cs">
+      <DependentUpon>frmNhanvienlenmcc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorTom\9_HR\frmTaidulieuchamcong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorTom\9_HR\frmTaidulieuchamcong.Designer.cs">
+      <DependentUpon>frmTaidulieuchamcong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorTom\9_HR\frmTaidulieunhanvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorTom\9_HR\frmTaidulieunhanvien.Designer.cs">
+      <DependentUpon>frmTaidulieunhanvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorTom\9_HR\frmXemdulieuchamcong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorTom\9_HR\frmXemdulieuchamcong.Designer.cs">
+      <DependentUpon>frmXemdulieuchamcong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorTom\9_HR\frmXemnhanvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorTom\9_HR\frmXemnhanvien.Designer.cs">
+      <DependentUpon>frmXemnhanvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorTom\frmBrowse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorTom\frmBrowse.Designer.cs">
+      <DependentUpon>frmBrowse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorTom\frm_calendar_a.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorTom\frm_calendar_a.Designer.cs">
+      <DependentUpon>frm_calendar_a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorTom\ReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorTom\ReportViewer.Designer.cs">
+      <DependentUpon>ReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Res\Print\rp_po.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rp_po.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="userCtrl\ctr_enginerrmenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userCtrl\ctr_enginerrmenu.Designer.cs">
+      <DependentUpon>ctr_enginerrmenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userCtrl\ctr_Fimenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userCtrl\ctr_Fimenu.Designer.cs">
+      <DependentUpon>ctr_Fimenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userCtrl\ctr_hrmenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userCtrl\ctr_hrmenu.Designer.cs">
+      <DependentUpon>ctr_hrmenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userCtrl\ctr_Purchasemenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userCtrl\ctr_Purchasemenu.Designer.cs">
+      <DependentUpon>ctr_Purchasemenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userCtrl\ctr_Settingsmenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userCtrl\ctr_Settingsmenu.Designer.cs">
+      <DependentUpon>ctr_Settingsmenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userCtrl\ctr_morebutton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userCtrl\ctr_morebutton.Designer.cs">
+      <DependentUpon>ctr_morebutton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userCtrl\ctr_salemenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userCtrl\ctr_salemenu.Designer.cs">
+      <DependentUpon>ctr_salemenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userCtrl\ctr_whmenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userCtrl\ctr_whmenu.Designer.cs">
+      <DependentUpon>ctr_whmenu.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorTom\1_Engineer\frmBOM.resx">
+      <DependentUpon>frmBOM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorTom\1_Engineer\frmImportMaterials.resx">
+      <DependentUpon>frmImportMaterials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorTom\1_Engineer\frmMaterials.resx">
+      <DependentUpon>frmMaterials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorTom\4_Purchasing\frmPO.resx">
+      <DependentUpon>frmPO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorTom\4_Purchasing\frmPOinfo.resx">
+      <DependentUpon>frmPOinfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorTom\4_Purchasing\frmPomain.resx">
+      <DependentUpon>frmPomain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorTom\4_Purchasing\frmQuotation.resx">
+      <DependentUpon>frmQuotation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorTom\4_Purchasing\frmSupplier.resx">
+      <DependentUpon>frmSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorTom\4_Purchasing\frmUpdate_po_mat.resx">
+      <DependentUpon>frmUpdate_po_mat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorTom\4_Purchasing\frm_Quoteinfo.resx">
+      <DependentUpon>frm_Quoteinfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorTom\4_Purchasing\RP\rp_po.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rp_po.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorTom\5_Warehouse\frmTransaction.resx">
+      <DependentUpon>frmTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorTom\5_Warehouse\frmTransfer.resx">
+      <DependentUpon>frmTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorTom\5_Warehouse\frmWH.resx">
+      <DependentUpon>frmWH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorTom\6_Sales\frmCustomer.resx">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorTom\6_Sales\frmSales.resx">
+      <DependentUpon>frmSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorTom\6_Sales\frmSO.resx">
+      <DependentUpon>frmSO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorTom\6_Sales\frmSosummary.resx">
+      <DependentUpon>frmSosummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorTom\6_Sales\RP\rp_so.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rp_so.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorTom\7_Settings\frmEquipment.resx">
+      <DependentUpon>frmEquipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorTom\7_Settings\frmEquipmentlist.resx">
+      <DependentUpon>frmEquipmentlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorTom\7_Settings\frmUserError.resx">
+      <DependentUpon>frmUserError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorTom\7_Settings\frmUserList.resx">
+      <DependentUpon>frmUserList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorTom\7_Settings\frmUsersettup.resx">
+      <DependentUpon>frmUsersettup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorTom\7_Settings\frm_Settings.resx">
+      <DependentUpon>frm_Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorTom\8_Financial\frmTinhluongngoaigio.resx">
+      <DependentUpon>frmTinhluongngoaigio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorTom\9_HR\frmCaidatcalamviec.resx">
+      <DependentUpon>frmCaidatcalamviec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorTom\9_HR\frmCaidatmcc.resx">
+      <DependentUpon>frmCaidatmcc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorTom\9_HR\frmCaidatphongban.resx">
+      <DependentUpon>frmCaidatphongban.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorTom\9_HR\frmCalendar.resx">
+      <DependentUpon>frmCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorTom\9_HR\frmNhanvienlenmcc.resx">
+      <DependentUpon>frmNhanvienlenmcc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorTom\9_HR\frmTaidulieuchamcong.resx">
+      <DependentUpon>frmTaidulieuchamcong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorTom\9_HR\frmTaidulieunhanvien.resx">
+      <DependentUpon>frmTaidulieunhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorTom\9_HR\frmXemdulieuchamcong.resx">
+      <DependentUpon>frmXemdulieuchamcong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorTom\9_HR\frmXemnhanvien.resx">
+      <DependentUpon>frmXemnhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorTom\frmBrowse.resx">
+      <DependentUpon>frmBrowse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorTom\frm_calendar_a.resx">
+      <DependentUpon>frm_calendar_a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorTom\ReportViewer.resx">
+      <DependentUpon>ReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Res\Print\rp_po.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rp_po.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userCtrl\ctr_enginerrmenu.resx">
+      <DependentUpon>ctr_enginerrmenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userCtrl\ctr_Fimenu.resx">
+      <DependentUpon>ctr_Fimenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userCtrl\ctr_hrmenu.resx">
+      <DependentUpon>ctr_hrmenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userCtrl\ctr_Purchasemenu.resx">
+      <DependentUpon>ctr_Purchasemenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userCtrl\ctr_Settingsmenu.resx">
+      <DependentUpon>ctr_Settingsmenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userCtrl\ctr_morebutton.resx">
+      <DependentUpon>ctr_morebutton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userCtrl\ctr_salemenu.resx">
+      <DependentUpon>ctr_salemenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userCtrl\ctr_whmenu.resx">
+      <DependentUpon>ctr_whmenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Res\import_template\Materials_import_template.xlsx" />
+    <None Include="Res\import_template\PO_import_template.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="33_Z10_icon.ico" />
+    <Content Include="Res\33_Z10_icon.ico" />
+    <Content Include="Res\33__1__JPK_icon.ico" />
+    <Content Include="Res\img\calendar.png" />
+    <Content Include="Res\img\chat.png" />
+    <None Include="Res\img\database_4-512.png" />
+    <Content Include="Res\img\document.png" />
+    <Content Include="Res\img\enginee1r.png" />
+    <Content Include="Res\img\engineer.png" />
+    <None Include="Res\img\financial.png" />
+    <None Include="Res\img\financia1l.png" />
+    <Content Include="Res\img\free-glyph-icons%401x.png" />
+    <Content Include="Res\img\logout.png" />
+    <Content Include="Res\img\mouse-click-512.png" />
+    <Content Include="Res\img\notification.png" />
+    <None Include="Res\img\password.png" />
+    <Content Include="Res\img\planning.png" />
+    <Content Include="Res\img\production.png" />
+    <Content Include="Res\img\Purchasing.png" />
+    <Content Include="Res\img\sales.png" />
+    <Content Include="Res\img\setting.png" />
+    <None Include="Res\img\user.png" />
+    <Content Include="Res\img\warehouse.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MajorTom\2_Planning\" />
+    <Folder Include="MajorTom\3_Production\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="SAP.CrystalReports14.NET.2.0">
+      <Visible>False</Visible>
+      <ProductName>SAP Crystal Reports Runtime Engine for .NET Framework</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="CrystalDecisions.ReportSource">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Shared">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Windows.Forms">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="log4net">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.CoreUtility">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Data.Framework">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.DataDesign.Common">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.DataDesign.DataSetDesigner">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.DataDesign.Interfaces">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Debugger.Interop.Internal">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Designer.Interfaces">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Diagnostics.Assert">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Diagnostics.PerformanceProvider">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Editor">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.ExtensibilityHosting">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.ImageCatalog">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Imaging">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Language.Intellisense">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Package.LanguageService.14.0">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Shell.14.0">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Shell.Design">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Shell.Immutable.10.0">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Shell.Immutable.11.0">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Shell.Immutable.12.0">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Shell.Immutable.14.0">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Shell.Interop">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Shell.Interop.10.0">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Shell.Interop.11.0">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Shell.Interop.8.0">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Shell.Interop.9.0">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Text.Data">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Text.Logic">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Text.UI">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Text.UI.Wpf">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Threading">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Utilities">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Validation">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.WizardFramework">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VSDesigner">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VSDesigner.ExceptionAssistant.SmartTag">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="System.Collections.Immutable">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="zkemkeeper">
+      <Guid>{FE9DED34-E159-408E-8490-B720A5E632C7}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
